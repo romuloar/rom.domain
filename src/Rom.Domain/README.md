@@ -176,10 +176,6 @@ We welcome contributions! If you have suggestions, bug reports, or feature reque
 
 ## 📄 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-## 📝 Changelog
-See the [CHANGELOG](CHANGELOG.md) file for a detailed list of changes and updates.
 
 ## Author
 Romulo Ribeiro
