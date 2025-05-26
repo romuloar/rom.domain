@@ -1,7 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFramework>netstandard2.0</TargetFramework>	  
+	  <TargetFramework>netstandard2.0</TargetFramework>	 
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageId>Rom.Domain</PackageId>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <Version>1.0.0</Version>
+	  <Authors>Romulo Ribeiro</Authors>
+	  <Company>Rom</Company>
+	  <Description>
+		  This package helps you create cleaner and more robust domain models by handling validation in a smart way. 
+		  It combines the power of C# DataAnnotations with your own custom validation rules. The result? A single place to manage and check all domain-related validations. No more clutter.
+	  </Description>
+	  <PackageTags>dotnet;validation;domain;basedomain;entity;model;</PackageTags>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/romuloar/rom.result</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rom.Domain.Abstractions\Rom.Domain.Abstractions.csproj" />
+	<None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
