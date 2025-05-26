@@ -2,6 +2,22 @@
 
   <PropertyGroup>
 	  <TargetFramework>netstandard2.0</TargetFramework>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageId>Rom.Domain.Abstractions</PackageId>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <Version>1.0.0</Version>
+	  <Authors>Romulo Ribeiro</Authors>
+	  <Company>Rom</Company>
+	  <Description>
+		  A .NET Standard 2.0 library to help you create cleaner and more robust domain models by handling validation in a smart way.
+		  It combines the power of C# DataAnnotations with your own custom validation rules, providing a single place to manage and check all domain-related validations.
+	  </Description>
+	  <PackageTags>dotnet;validation;domain;basedomain;entity;model;</PackageTags>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/romuloar/rom.domain/tree/main/src/Rom.Domain.Abstractions</RepositoryUrl>	  
   </PropertyGroup>
 
+	<ItemGroup>		
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 </Project>

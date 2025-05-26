@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	  <TargetFramework>netstandard2.0</TargetFramework>	 
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageId>Rom.Domain</PackageId>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <Version>1.0.0</Version>
@@ -14,7 +14,7 @@
 	  </Description>
 	  <PackageTags>dotnet;validation;domain;basedomain;entity;model;</PackageTags>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <RepositoryUrl>https://github.com/romuloar/rom.result</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/romuloar/rom.domain</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
