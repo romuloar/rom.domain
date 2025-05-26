@@ -1,0 +1,43 @@
+name: Publish NuGet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    environment: nuget # Use o nome do seu Environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build src/Rom.Domain/Rom.Domain.csproj --configuration Release --no-restore
+
+      - name: Pack
+        run: dotnet pack src/Rom.Domain/Rom.Domain.csproj --configuration Release --no-build -o ./nupkg
+
+      - name: Show current directory and files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Root files:"
+          dir
+          echo "nupkg files:"
+          dir ./nupkg
+      - name: Publish to NuGet
+        run: |
+          $file = Get-ChildItem -Path ./nupkg -Filter *.nupkg | Select-Object -ExpandProperty FullName
+          dotnet nuget push $file --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        shell: pwsh
