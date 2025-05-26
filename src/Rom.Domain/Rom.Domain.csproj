@@ -5,7 +5,7 @@
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageId>Rom.Domain</PackageId>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <Version>1.0.0</Version>
+	  <Version>1.0.1</Version>
 	  <Authors>Romulo Ribeiro</Authors>
 	  <Company>Rom</Company>
 	  <Description>
@@ -18,12 +18,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Rom.Domain.Abstractions" Version="1.0.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="System.Text.Json" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rom.Domain.Abstractions\Rom.Domain.Abstractions.csproj" />
 	<None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
